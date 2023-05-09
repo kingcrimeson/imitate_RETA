@@ -161,7 +161,7 @@ def build_data(folder='data/'):
     # print("entities who have no neighbor:{}".format(no_neighbor))
     data_info = {"train_facts": train_facts, "valid_facts": valid_facts, 'test_facts': test_facts,
                  'values_indexes': values_indexes, 'roles_indexes': roles_indexes, 'BK_graph': BK_graph}
-
+    print(values_indexes)
     role_val = get_neg_candidate_set(folder, values_indexes, roles_indexes)
     data_info['role_val'] = role_val
     with open(folder + "/dictionaries_and_facts" + FLAGS.bin_postfix + ".bin", 'wb') as f:
